@@ -47,7 +47,7 @@ FastAPI (API Layer)
 | Agent | LangGraph + LangChain |
 | LLM | AWS Bedrock (MiniMax M2.5) |
 | Embeddings | AWS Bedrock (Titan Embeddings v2) |
-| Reranker | AWS Bedrock Cohere Rerank 3.5 (us-west-2) |
+| Reranker | AWS Bedrock amazon.rerank-v1:0 (us-west-2) |
 | Vector Store | ChromaDB |
 | Document Store | AWS DynamoDB |
 | File Storage | AWS S3 |
@@ -229,18 +229,16 @@ curl http://localhost:8000/health
 ## Future Improvements
 
 - **Redis Memory** — replace in-memory session store with Redis for persistent cross-restart conversation history
-- **Rate Limiting** — per-user request throttling
 - **Authentication** — JWT-based user auth with per-user document isolation
 - **Multi-tenancy** — namespace documents by organization
 - **Async Ingestion Queue** — SQS + Lambda workers for high-volume document processing
 - **Self-hosted Langfuse** — deploy Langfuse on EC2 for full data sovereignty observability
-- **EC2 ChromaDB** — move ChromaDB from Docker to dedicated EC2 instance
 - **Unit + Integration Tests** — pytest test suite for all core components
 - **CI/CD Pipeline** — GitHub Actions for automated testing and deployment
 - **Streaming Responses** — stream LLM responses for better UX
 
 ---
 
-## 📄 License
+## License
 
 MIT
