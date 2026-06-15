@@ -54,3 +54,5 @@ coverage.xml
 
 # Database / Vector Stores
 chroma/
+chroma_data/
+*.sqlite3

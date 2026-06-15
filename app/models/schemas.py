@@ -1,5 +1,5 @@
-from typing import Optional
 from pydantic import BaseModel
+from typing import Optional, Any
 
 class UploadUrlRequest(BaseModel):
     filename: str
@@ -22,4 +22,4 @@ class QueryRequest(BaseModel):
 class QueryResponse(BaseModel):
     answer: str
     session_id: str
-    sources: list[str]
+    sources: list[Any] = []
